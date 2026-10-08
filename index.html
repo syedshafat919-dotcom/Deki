@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Anisha 💙</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#91caff;--white:#f4f7ff}
+body{
+  min-height:100vh;color:var(--white);
+  font-family:Georgia,'Times New Roman',serif;
+  background:radial-gradient(ellipse at top,#152d54 0%,#080f22 48%,#030610 100%);
+  overflow-x:hidden;text-align:center
+}
+#stars{position:fixed;inset:0;pointer-events:none;z-index:0}
+.star{position:absolute;background:#d9edff;border-radius:50%;
+  animation:twinkle 3s infinite alternate}
+@keyframes twinkle{from{opacity:.2;transform:scale(.7)}
+to{opacity:1;transform:scale(1.2)}}
+main{position:relative;z-index:1;width:min(720px,92%);
+margin:auto;padding:70px 0 45px}
+.moon{font-size:55px;filter:drop-shadow(0 0 22px #8abfff);
+animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.eyebrow{margin-top:26px;color:#a9c9f5;
+letter-spacing:5px;font:11px Arial,sans-serif}
+h1{font-size:clamp(42px,10vw,76px);line-height:1.13;
+margin:20px 0;color:#fff;text-shadow:0 0 32px #5d9fff}
+h1 span{display:block;color:var(--blue);font-style:italic}
+.subtitle{font:13px Arial,sans-serif;letter-spacing:2px;
+color:#b8c6df;line-height:1.8}
+button{cursor:pointer;border:1px solid #7eaee8;
+border-radius:30px;padding:13px 22px;color:#eff7ff;
+background:#152744;transition:.25s;font-size:13px}
+button:hover{background:#24446d;transform:translateY(-2px)}
+.buttons{display:flex;justify-content:center;gap:12px;
+flex-wrap:wrap;margin:30px 0 48px}
+.card{padding:30px 23px;margin:22px 0;
+background:linear-gradient(145deg,#ffffff0d,#7caeff08);
+border:1px solid #a9ccff2a;border-radius:22px;
+box-shadow:0 15px 50px #0003;backdrop-filter:blur(8px)}
+.label{font:10px Arial,sans-serif;letter-spacing:4px;
+color:var(--blue);text-transform:uppercase;margin-bottom:20px}
+.card h2{font-size:27px;font-weight:normal;margin-bottom:18px}
+.card p{font-size:16px;line-height:1.95;color:#d0d9ec}
+.special{font-size:clamp(21px,5vw,30px)!important;
+font-style:italic;color:#fff!important;line-height:1.65!important}
+.divider{color:#88bfff;letter-spacing:8px;margin:24px 0}
+.hidden{display:none}
+.reveal{animation:appear 1s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}
+to{opacity:1;transform:translateY(0)}}
+footer{font:11px Arial,sans-serif;letter-spacing:2px;
+color:#8294b3;padding:28px 0 10px}
+.heart{display:inline-block;animation:heartbeat 1.5s infinite}
+@keyframes heartbeat{50%{transform:scale(1.2)}}
+@media(max-width:480px){
+main{padding-top:48px}.card{padding:25px 19px}
+.eyebrow{letter-spacing:3px}
+}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<main>
+  <div class="moon">☾</div>
+  <div class="eyebrow">A LITTLE SOMETHING FOR YOU</div>
+
+  <h1>Happy Birthday,<span>Anisha.</span></h1>
+  <p class="subtitle">
+    TODAY IS YOUR DAY<br>
+    AND YOU DESERVE ALL THE BEAUTIFUL THINGS.
+  </p>
+
+  <div class="buttons">
+    <button id="soundBtn">♫ Play Birthday Chimes</button>
+    <button id="surpriseBtn">Open Your Surprise ✧</button>
+  </div>
+
+  <section class="card reveal">
+    <div class="label">01 — A Birthday Wish</div>
+    <h2>For someone special 💙</h2>
+    <p>
+      Happy Birthday, Anisha! 🎂<br>
+      May your days be filled with happiness,
+      your heart with peace, and your life with
+      countless little reasons to smile.
+      May this new chapter bring you beautiful
+      memories, unexpected blessings, and all
+      the love you truly deserve.
+    </p>
+    <div class="divider">✧ · ✧ · ✧</div>
+    <p>Stay happy. Keep smiling. Keep being you. 🦋</p>
+  </section>
+
+  <section class="card">
+    <div class="label">02 — A Little Secret</div>
+    <h2>Something from my heart</h2>
+    <p class="special">
+      When you are by my side, the whole world
+      seems even more beautiful and colorful.
+      You're the cutest girl I've ever seen. 🖤
+    </p>
+    <div class="divider">♡</div>
+    <p>Some feelings are too beautiful for ordinary words.</p>
+  </section>
+
+  <section id="surprise" class="card hidden">
+    <div class="label">03 — Just For You</div>
+    <h2>You deserve a beautiful life ✨</h2>
+    <p>
+      If I could wish one thing for you,
+      it would be that life always gives you
+      reasons to smile, even on your hardest days.
+      May your dreams find their way to you.
+    </p>
+    <div class="divider">☾ ✦ ♡ ✦ ☽</div>
+    <p>With warm wishes, always. 💙</p>
+  </section>
+
+  <footer>
+    MADE WITH <span class="heart">♡</span> & CARE<br><br>
+    A LITTLE MEMORY UNDER THE STARS
+  </footer>
+</main>
+
+<script>
+const starField = document.getElementById('stars');
+for(let i=0;i<100;i++){
+  const s=document.createElement('i');
+  s.className='star';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  const size=Math.random()*2.5+1;
+  s.style.width=size+'px';
+  s.style.height=size+'px';
+  s.style.animationDelay=Math.random()*4+'s';
+  starField.appendChild(s);
+}
+
+let audioCtx=null,playing=false,timer=null;
+const soundBtn=document.getElementById('soundBtn');
+
+// Original gentle chimes, generated in the browser.
+// No song or external audio file is used.
+function chime(){
+  if(!audioCtx||!playing)return;
+  const notes=[523.25,659.25,783.99,1046.5];
+  notes.forEach((freq,i)=>{
+    const osc=audioCtx.createOscillator();
+    const gain=audioCtx.createGain();
+    osc.type='sine';
+    osc.frequency.value=freq;
+    const start=audioCtx.currentTime+i*.22;
+    gain.gain.setValueAtTime(.0001,start);
+    gain.gain.exponentialRampToValueAtTime(.07,start+.03);
+    gain.gain.exponentialRampToValueAtTime(.0001,start+.8);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start(start);
+    osc.stop(start+.85);
+  });
+}
+soundBtn.addEventListener('click',async()=>{
+  if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+  await audioCtx.resume();
+  playing=!playing;
+  if(playing){
+    soundBtn.textContent='Ⅱ Pause Chimes';
+    chime();
+    timer=setInterval(chime,2600);
+  }else{
+    clearInterval(timer);
+    soundBtn.textContent='♫ Play Birthday Chimes';
+  }
+});
+
+document.getElementById('surpriseBtn').addEventListener('click',()=>{
+  const box=document.getElementById('surprise');
+  box.classList.remove('hidden');
+  box.classList.remove('reveal');
+  void box.offsetWidth;
+  box.classList.add('reveal');
+  document.getElementById('surpriseBtn').textContent='Your Surprise Is Opened ♡';
+  box.scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
